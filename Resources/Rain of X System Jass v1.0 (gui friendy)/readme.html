@@ -1,0 +1,84 @@
+<h1>Rain of X System Jass v1.0 (gui friendy)</h1>
+<p>Submitted by KitsuneTailsPrower</p>
+<p>Uploaded: 17 Jun, 2020</p>
+<p>Last edited: 17 Jun, 2020</p>
+<p>Source:</p>
+<p><a href="https://www.hiveworkshop.com/threads/rain-of-x-system-jass-v1-0-gui-friendy.325554/">https://www.hiveworkshop.com/threads/rain-of-x-system-jass-v1-0-gui-friendy.325554/</a></p>
+<p>Tags: System, Target Ground, JASS</p>
+<p>Filesize: 42.1 KB</p>
+<h2>Rain of X System Jass v1.0</h2>
+<p>Filesize: 42.1 KB</p>
+<p>Filename: RoXSystem jass.w3x</p>
+<p>Number of players: 1</p>
+<p>Recommended game:</p>
+<p>Warcraft 3: Classic/Reforged (1.32)</p>
+<h2>Description</h2>
+<p>Title: Rain of X System jass (gui friendly)<br />
+<br />
+Description:<br />
+<br />
+This system allows you to create rain of fire style spells with any model and any impact effects you choose instead of just damaging the targets<br />
+<br />
+I noticed some issues with the rain of x system found here:<br />
+<a href="https://www.hiveworkshop.com/threads/rain-of-x-system-version-1-1a.136432/" class="link link--internal">Rain of [X] System, Version 1.1a</a><br />
+<br />
+Namely it lags online and lacks the ability to include secondary effects in addition to damage so I created my own Rain of X system.<br />
+<br />
+Requirements:<br />
+<br />
+Any unit indexer (One is included in the map file)<br />
+<br />
+Usage:<br />
+<br />
+To call down a single wave of a rain of x:<br />
+<br />
+call RoX_Jass caster,targetx,targety,radius,fx,shardcount,startheight,fallspeed,impacttrig<br />
+<br />
+unit caster: The variable udg_Rox_Jass_Caster is set to this unit when the wave hits<br />
+<br />
+real target x: x coordinate of the center of the rain<br />
+<br />
+real target y: y coordinate of the center of the rain<br />
+<br />
+real radius: Radius of the rain<br />
+<br />
+string fx: Model for the rain of x shards e.g. a farseer missile<br />
+<br />
+integer shardcount: Number of shards in the wave, purely visual<br />
+<br />
+real start height: Starting height of each shard<br />
+<br />
+real fallspeed: Speed at which the shards fall<br />
+<br />
+trigger impacttrig: trigger that is run once for each unit in the radius when the wave hits. Each instance of the trigger will have RoX_Jass_Caster set to the caster and RoX_Jass_Target set to the current unit being enumerated. e.g. You could have Rox_Jass_Caster damage Rox_Jass_Target by calling UnitDamageTarget. If you want your Rain of X spell to not affect certain units you must specify that in conditions in the trigger or if/then/else statements.<br />
+<br />
+To call down x waves of a rain of x:<br />
+<br />
+call RoX_Jass_Loop caster,targetx,targety,radius,fx,shardcount,startheight,fallspeed,impacttrig,count,delay<br />
+<br />
+The parameters with the same names as above are the same as above<br />
+<br />
+integer count: The number of waves<br />
+<br />
+real delay: Delay between waves, must be greater then or equal to  0.27 or it will lag.<br />
+<br />
+How to Import:<br />
+<br />
+1. If you don't already have a unit indexer, install one in your map. You can copy the included Unit Indexer trigger into your map if you don't want to search for a unit indexer.<br />
+<br />
+2. Copy the Shard_Dummy unit into your map<br />
+<br />
+3. Copy the trigger category Rain of X System JASS into your map<br />
+<br />
+4. Set the variable RoX_Jass_Dummy_ID to the ID of the shard dummy<br />
+<br />
+5. Export dummy.mdx from this map and import it into yourmap.<br />
+<br />
+<br />
+credits:<br />
+Vexorain for dummy.mdx<br />
+<br />
+Bribe for the unit indexer I used<br />
+<br />
+lolrepoted for the concept, test map terrain and dummy unit object editor data</p>
+<p>Don't forget to credit the author.</p>

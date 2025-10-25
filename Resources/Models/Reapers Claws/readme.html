@@ -1,0 +1,122 @@
+<h1>Reaper's Claws</h1>
+<p>Submitted by Vinz</p>
+<p>Uploaded: 17 Nov, 2020</p>
+<p>Last edited: 23 Nov, 2020</p>
+<p>Source:</p>
+<p><a href="https://www.hiveworkshop.com/threads/reapers-claws.328636/">https://www.hiveworkshop.com/threads/reapers-claws.328636/</a></p>
+<p>Tags: Effect, Undead</p>
+<p>Filesize: 118.3 KB</p>
+<h2>Reaper's Claws Blue</h2>
+<p>Filesize: 16.89 KB</p>
+<p>Animations:</p>
+<ul>
+<li>Stand</li>
+</ul>
+<h2>Reaper's Claws Gold</h2>
+<p>Filesize: 17.07 KB</p>
+<p>Animations:</p>
+<ul>
+<li>Stand</li>
+</ul>
+<h2>Reaper's Claws Green</h2>
+<p>Filesize: 16.81 KB</p>
+<p>Animations:</p>
+<ul>
+<li>Stand</li>
+</ul>
+<h2>Reaper's Claws Orange</h2>
+<p>Filesize: 16.83 KB</p>
+<p>Animations:</p>
+<ul>
+<li>Stand</li>
+</ul>
+<h2>Reaper's Claws Pink</h2>
+<p>Filesize: 16.81 KB</p>
+<p>Animations:</p>
+<ul>
+<li>Stand</li>
+</ul>
+<h2>Reaper's Claws Purple</h2>
+<p>Filesize: 16.83 KB</p>
+<p>Animations:</p>
+<ul>
+<li>Stand</li>
+</ul>
+<h2>Reaper's Claws Red</h2>
+<p>Filesize: 17.07 KB</p>
+<p>Animations:</p>
+<ul>
+<li>Stand</li>
+</ul>
+<h2>Description</h2>
+<p><div class="bbTable">
+<table style='width: 100%'><tr><td><br />
+<span style="font-size: 22px">Reaper's Claws</span><br />
+<br />
+Previews: Tilted 0, 45, and 135 degrees at various heights<br />
+<br />
+Roll goes counter-clockwise, so the demo uses negative angles.<br />
+TimeScale determines the effect's speed, where 1 = 100%.<br />
+<br />
+
+
+<div class="bbCodeSpoiler">
+	<button type="button" class="bbCodeSpoiler-button button--longText button" data-xf-click="toggle" data-xf-init="tooltip" title="Click to reveal or hide spoiler"><span class="button-text">
+
+		<span><span class="bbCodeSpoiler-button-title">Demo</span></span>
+	</span></button>
+	<div class="bbCodeSpoiler-content">
+		<div class="bbCodeBlock bbCodeBlock--spoiler">
+			<div class="bbCodeBlock-content"><pre style="margin: 1em 0">    local unit u = GetTriggerUnit()
+    local effect fx
+    local real x = GetUnitX(u)
+    local real y = GetUnitY(u)
+    local real face = Deg2Rad(GetUnitFacing(u))
+    local real tilt
+
+    set tilt = 0
+    set fx = AddSpecialEffect(&quot;war3mapImported\\Reapers Claws Red.mdx&quot;, x, y)
+    call BlzSetSpecialEffectOrientation( fx, face, 0, Deg2Rad(tilt))
+    call BlzSetSpecialEffectHeight(fx, 90 + BlzGetUnitZ(u))
+    call DestroyEffect(fx)
+
+    set tilt = -45
+    set fx = AddSpecialEffect(&quot;war3mapImported\\Reapers Claws Red.mdx&quot;, x, y)
+    call BlzSetSpecialEffectOrientation( fx, face, 0, Deg2Rad(tilt))
+    call BlzSetSpecialEffectHeight(fx, 110 + BlzGetUnitZ(u))
+    call BlzSetSpecialEffectTimeScale(fx, 0.8)
+    call DestroyEffect(fx)
+
+    set tilt = -135
+    set fx = AddSpecialEffect(&quot;war3mapImported\\Reapers Claws Red.mdx&quot;, x, y)
+    call BlzSetSpecialEffectOrientation( fx, face, 0, Deg2Rad(tilt))
+    call BlzSetSpecialEffectHeight(fx, 110 + BlzGetUnitZ(u))
+    call BlzSetSpecialEffectTimeScale(fx, 0.7)
+    call DestroyEffect(fx)
+
+    set u = null
+    set fx = null</pre></div>
+		</div>
+	</div>
+</div><br />
+</td></tr><tr><td><br />
+<ul>
+<li data-xf-list-type="ul"><span style="font-size: 18px">Changelog</span></li>
+</ul><div style="margin-left: 20px"><b><span style="font-size: 15px">17.11.20</span><br />
+-</b> Uploaded&#8203;</div><br />
+</td></tr><tr><td><br />
+<ul>
+<li data-xf-list-type="ul"><span style="font-size: 18px">Notes</span></li>
+</ul>Feel free to modify. Give credits.<br />
+<br />
+</td></tr><tr><td><br />
+<ul>
+<li data-xf-list-type="ul"><span style="font-size: 18px">Frequent Issues</span></li>
+</ul><br />
+Magos' Model Editor<br />
+If a.) the model/s present an error regarding a ribbon emitter upon opening, or b.) the models go blank in-game after editing them in Magos', use <a href="https://www.hiveworkshop.com/attachments/mdlxconv_1-04-zip.312211/" class="link link--internal">MdlxConv</a> to convert the uncorrupted file to mdl, edit the model as you wish, and then convert back to mdx before importing.<br />
+<br />
+In-Game<br />
+If models with omnilights light up the whole map after conversion, make sure you're using version 1.04 of MdlxConv.</td></tr></table>
+</div></p>
+<p>Don't forget to credit the author.</p>

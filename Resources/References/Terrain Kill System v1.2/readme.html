@@ -1,0 +1,920 @@
+<h1>Terrain Kill System v1.2</h1>
+<p>Submitted by Wrda</p>
+<p>Uploaded: 26 Dec, 2012</p>
+<p>Last edited: 13 Jan, 2013</p>
+<p>Source:</p>
+<p><a href="https://www.hiveworkshop.com/threads/terrain-kill-system-v1-2.227665/">https://www.hiveworkshop.com/threads/terrain-kill-system-v1-2.227665/</a></p>
+<p>Tags: System, GUI / Triggers</p>
+<p>Filesize: 19.58 KB</p>
+<h2>Terrain Kill</h2>
+<p>Filesize: 19.58 KB</p>
+<p>Filename: TerrainKill.w3x</p>
+<p>Number of players: 1</p>
+<p>Recommended game:</p>
+<p>Warcraft 3: Pre-Reforged (1.24a - 1.28c)</p>
+<h2>Description</h2>
+<p><u><span style="font-size: 22px">Terrain Kill System</span></u><br />
+<br />
+<b>Description</b><br />
+A simple system that detects if a unit is out of the pathable path or not. If it is out, it will be killed, else nothing happens.<br />
+<br />
+<b>Usefulness:</b><br />
+• Maze maps (as many users know, in a maze the objective is to walk on the given path, don't go outside of that path and avoid units.)<br />
+• Slide maps (same as maze, but sliding.)<br />
+• Escape maps (same as slide, but with bonus and find keys to unlock doors, e.g: AoIE - Area of Ice Escape)<br />
+<br />
+
+
+<div class="bbCodeSpoiler">
+	<button type="button" class="bbCodeSpoiler-button button--longText button" data-xf-click="toggle" data-xf-init="tooltip" title="Click to reveal or hide spoiler"><span class="button-text">
+
+		<span><span class="bbCodeSpoiler-button-title">Code</span></span>
+	</span></button>
+	<div class="bbCodeSpoiler-content">
+		<div class="bbCodeBlock bbCodeBlock--spoiler">
+			<div class="bbCodeBlock-content">
+
+<div class="bbCodeSpoiler">
+	<button type="button" class="bbCodeSpoiler-button button--longText button" data-xf-click="toggle" data-xf-init="tooltip" title="Click to reveal or hide spoiler"><span class="button-text">
+
+		<span><span class="bbCodeSpoiler-button-title">Configuration</span></span>
+	</span></button>
+	<div class="bbCodeSpoiler-content">
+		<div class="bbCodeBlock bbCodeBlock--spoiler">
+			<div class="bbCodeBlock-content">
+
+
+<ul class="bbcode-trigger" data-xf-init="trigger-tag">
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/base.gif" /><span>Configuration</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/events.gif" /><span>Events</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/folder.gif" /><span>Map initialization</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/cond.gif" /><span>Conditions</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Hashtable - Create a hashtable</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set tht = (Last created hashtable)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- Here you put your unit group, units owned by player or units of type --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set TKGroup = (Units of type Mountain King)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- or you can simply add a unit to the group: Unit Group - Add unit to TKGroup --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- ------------------- --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set TKoffset = 30.00</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- This is how much the unit can go out of path, if you&#039;re going to change this, i recommend the values between 10 45. --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- Lower or higher than this may cause some difficulties to pass certain parts or even ridiculous deathes. --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- ------------------- --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- Death terrain, the terrain that you mustn&#039;t walk on. You can have more than 1 death terrain, change the ttt variable to another terrain type. --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- ------------------- --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set ttt = Lordaeron Summer - Dark Grass</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   set udg_TKInt = udg_ttt</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Hashtable - Save True as 0 of TKInt in tht</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- ------------------- --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set ttt = Lordaeron Summer - Rough Dirt</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   set udg_TKInt = udg_ttt</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Hashtable - Save True as 0 of TKInt in tht</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- ------------------- --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set ttt = Lordaeron Summer - Grass</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   set udg_TKInt = udg_ttt</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Hashtable - Save True as 0 of TKInt in tht</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+</ul></div>
+		</div>
+	</div>
+</div>
+
+<div class="bbCodeSpoiler">
+	<button type="button" class="bbCodeSpoiler-button button--longText button" data-xf-click="toggle" data-xf-init="tooltip" title="Click to reveal or hide spoiler"><span class="button-text">
+
+		<span><span class="bbCodeSpoiler-button-title">Terrain Kill</span></span>
+	</span></button>
+	<div class="bbCodeSpoiler-content">
+		<div class="bbCodeBlock bbCodeBlock--spoiler">
+			<div class="bbCodeBlock-content">
+
+
+<ul class="bbcode-trigger" data-xf-init="trigger-tag">
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/base.gif" /><span>Terrain Kill</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/events.gif" /><span>Events</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/timer.gif" /><span>Time - Every 0.10 seconds of game time</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/cond.gif" /><span>Conditions</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/unitgroup.gif" /><span>Unit Group - Pick every unit in TKGroup and do (Actions)</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Loop - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set TKUnit = (Picked unit)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>If (All Conditions are True) then do (Then Actions) else do (Else Actions)</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/cond.gif" /><span>If - Conditions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>(TKUnit is alive) Equal to True</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Then - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set TKintChecker = 0</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Loc1 = (Position of TKUnit)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set ttt = (Terrain type at Loc1)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   set udg_TKInt = udg_ttt</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- Is terrain safe --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>If (All Conditions are True) then do (Then Actions) else do (Else Actions)</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/cond.gif" /><span>If - Conditions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>(0 is stored as a Boolean of TKInt in tht) Equal to True</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Then - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- Terrain was not safe, check tolerance --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>For each (Integer TKLoopInt2) from 0 to 3, do (Actions)</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Loop - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Loc2 = (Loc1 offset by TKoffset towards (90.00 x (Real(TKLoopInt2))) degrees)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set ttt = (Terrain type at Loc2)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   set udg_TKInt = udg_ttt</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>If (All Conditions are True) then do (Then Actions) else do (Else Actions)</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/cond.gif" /><span>If - Conditions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>(0 is stored as a Boolean of TKInt in tht) Equal to False</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Then - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- If any point around is safe, exit loop --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set TKLoopInt2 = 10</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Else - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>If (All Conditions are True) then do (Then Actions) else do (Else Actions)</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/cond.gif" /><span>If - Conditions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>TKintChecker Greater than or equal to 3</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Then - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/unit.gif" /><span>Unit - Kill TKUnit</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set TKLoopInt2 = 10</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Else - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set TKintChecker = (TKintChecker + 1)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   call RemoveLocation(udg_Loc2)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Else - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- Terrain was safe --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   call RemoveLocation(udg_Loc1)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Else - Actions</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+</ul></div>
+		</div>
+	</div>
+</div><br />
+</div>
+		</div>
+	</div>
+</div><br />
+
+
+<div class="bbCodeSpoiler">
+	<button type="button" class="bbCodeSpoiler-button button--longText button" data-xf-click="toggle" data-xf-init="tooltip" title="Click to reveal or hide spoiler"><span class="button-text">
+
+		<span><span class="bbCodeSpoiler-button-title">Change Log</span></span>
+	</span></button>
+	<div class="bbCodeSpoiler-content">
+		<div class="bbCodeBlock bbCodeBlock--spoiler">
+			<div class="bbCodeBlock-content"><br />
+v1.0 - Initial Release<br />
+v1.1 - more death terrain types available, and some optimization.<br />
+v1.2 - Fixed a leak, and more some optimization -&gt; thanks to Maker.</div>
+		</div>
+	</div>
+</div><br />
+This has a small maze example, with terrain kill.<br />
+Give me credits if you use this system and enjoy! <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="smilie smilie--sprite smilie--sprite8" alt=":D" title="Big Grin    :D" loading="lazy" data-shortname=":D" /><br />
+<br />
+<b>Keywords:</b><br />
+system, terrain, kill, death, blood, maze, slide, escape</p>
+<p>Don't forget to credit the author.</p>

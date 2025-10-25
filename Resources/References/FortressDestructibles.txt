@@ -1,0 +1,92 @@
+1-25 Nothing
+26 - 35 Small
+36 - 42 Medium
+43+ Large
+
+
+------------------Fortress Destructibles --------------------------
+
+-3233, -992 Barrel (upright) : 334
+
+-3250, -1055 Barrel (upright) : 267
+
+-2976, -960	Barrel (Side) : 265
+
+-2908, -980	Barrel (Upright) : 66
+
+-2944, -1055 Barrel (Side) : 333
+
+591, -942 Barrel (Upright) : 334
+
+658, -943 Barrel (Side) : 265
+
+3056, -1096 Barrel (upright) : 334
+
+3124, -1105 Barrel (side) : 265
+
+3113, -1173 Barrel (upright) : 231
+
+2860, -2001 Barrel (side) : 341
+
+2863, -2086 Barrel (Upright) : 334
+
+2786, -2091 Barrel (Side) : 265
+
+-3631, -1681 Barrel (upright) : 334
+
+-3572, -1620 Barrel (upright) : 227
+
+-3559, -1691 Barrel (Upright) : 151
+
+-3072, -2853 Chest : 90
+
+-832, -1344 Chest : 90
+
+2983, -1282 Chest : 180
+
+------------------Fortress Units --------------------------
+
+
+
+-------------------Hell Destructibles -------------------------
+
+5087, 1693 Upright : 256
+
+5153, 1683 side : 233
+
+5150, 1598 upright : 106
+
+3938, 567 upright : 299
+
+3940, 502 upright : 41
+
+4000, 476 upright : 81
+
+
+
+4703, -1249 upright : 53
+
+4774, -1237 side : 293
+
+4722, -1312 side : 216
+
+8870, 1041 upright : 99
+
+8791, 1060 side : 327
+
+8859, 973 side : 353
+
+
+
+9760, 1057 chest : 270
+
+3968, 1665 chest : 315
+
+9855, -959 chest : 180
+
+-------------------Hell Units-------------------------
+
+
+
+
+
